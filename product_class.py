@@ -8,7 +8,7 @@ class Product(object):
         #self.cost = cost 
         self.status = "for sale"
         self.reason_for_return = ""
-        self.tax = .15
+        self.tax = .015
 
     def Sell(self):
         self.status = "sold"
@@ -16,7 +16,7 @@ class Product(object):
         return self
 
     def AddTax(self):
-        self.price = (self.price/100)*self.tax + self.price
+        self.price = (self.price)*self.tax + self.price
         print self.price
         return self
 
