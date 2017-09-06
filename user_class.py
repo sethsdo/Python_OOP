@@ -14,5 +14,6 @@ class User(object):
 
 new_user = User("Seth","setholmstead@gmail.com")
 print new_user.email
+
         
     

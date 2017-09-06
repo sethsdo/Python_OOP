@@ -1,4 +1,5 @@
 #class store
+#Now, let's build a store to contain our products by making a store class and putting our products into an array.
 
 class Store(object):
     def __init__(self, products, location, owner):
