@@ -36,13 +36,16 @@ class CallCenter(object):
             print '{}, {}'.format(i.caller_name, i.phone_num)
         print self.calls
         return self
+    def sort(self):
+        self.calls = sorted(self.calls, key=lambda sort_time: sort_time.time_of_call)
+        return self
 
 #instances of the class 
-call1 = Call("id:1","Seth","555-555-555","3:56 p.m","inquery")
-call2 = Call("id:1","Seth","777-555-555","3:56 p.m","inquery")
-call3 = Call("id:1","Seth","666-555-555","3:56 p.m","inquery")
+call1 = Call("id:1","Seth","555-555-555", 3,"inquery")
+call2 = Call("id:1","Seth","777-555-555",2,"inquery")
+call3 = Call("id:1","Seth","666-555-555", 1,"inquery")
 cc = CallCenter()
-cc.add(call1).add(call2).add(call3).remove("777-555-555").info()
+cc.add(call1).add(call2).add(call3).remove("777-555-555").sort().info()
 
 
 
