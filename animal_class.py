@@ -25,21 +25,25 @@ class Animal(object):
 
 #class dog inharits from parent animal class
 class Dog(Animal):
-    #methods   
+    #methods 
+    def __init__(self, name, health):  
+        super(Dog, self).__init__(name, 150)
+        #self.health = 150
     def pet(self):
-        self.health = 150
+        #self.health = 150
         self.health = self.health + 5
         return self
 
 #dog class calls
-dog1 = Dog("Lose", 0)
-dog1.walk().walk().walk().run().run().pet().displayHealth()
+dog1 = Dog("Lose", 150)
+dog1.pet().displayHealth()
 
 #class Dragon inharits from parent animal class
 class Dragon(Animal):  
     #methods
+    def __init__(self, name, health):  
+        super(Dragon, self).__init__(name, 170)
     def fly(self):
-        self.health = 170
         self.health = self.health - 10
         return self
     #methods
@@ -54,9 +58,10 @@ dragon1.fly().display_health()
 
 #class Shark inharits from parent animal class
 class Shark(Animal): 
-    #methods   
+    #methods 
+    def __init__(self, name, health):  
+        super(Shark, self).__init__(name, 170)  
     def swim(self):
-        self.health = 170
         self.health = self.health - 4
         return self
     #methods

@@ -54,5 +54,5 @@ class MathDojo(object):
 
 #method calls 
 md = MathDojo(0,0,0)
-md.add(4.0, 4).add(4, [4.3]).subtract(50, [5,3,4]).Result()
+md.add([1], 3,4).add([3,5,7,8], [2,4.3,1.25]).subtract(2, [2,3], [1.1,2.3]).Result()
 
